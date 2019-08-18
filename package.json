@@ -1,0 +1,22 @@
+{
+  "name": "applicationsserver",
+  "version": "1.0.0",
+  "description": "Servidor de aplicações para atender o conteudo estático da homepage e o gateway de APIs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fabriciu/ApplicationsServer.git"
+  },
+  "author": "Fabriciu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fabriciu/ApplicationsServer/issues"
+  },
+  "homepage": "https://github.com/Fabriciu/ApplicationsServer#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
