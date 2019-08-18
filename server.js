@@ -4,6 +4,9 @@ var port = process.env.PORT || 3000;
 
 app.use(express.static(__dirname + '/public'));
 
+var routes = require('./routes/routes');
+routes(app);
+
 app.listen(port);
 
 console.log("API server started and listening on: " + port);

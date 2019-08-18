@@ -19,7 +19,7 @@
     <div class="jumbotron jumbotron-fluid" style="background-color:#EC7000" >
       <div class="container">
         <h1 class="display-4" style="color: white">Twitter Hashtags</h1>
-        <p class="lead" style="color: white">Sumarizador de dados coletados sobre hashtags</p>
+        <p class="lead" style="color: white">Sumarizador de dados coletados sobre #hashtags</p>
       </div>
     </div>
     <div class="row align-items-start">
@@ -127,10 +127,20 @@
 
         $http({
           method: "GET",
-          url: "http://localhost:8080/v1/users/mostFollowed",
-          params: {count: 5}
+          url: "http://localhost:3000/authorization"
         }).then(function success(response){
-          $scope.usersList = response.data.users;
+          $http({
+            method: "GET",
+            url: "http://localhost:8080/users/mostFollowed",
+            params: {count: 5},
+            headers: {
+              'Authorization': 'Bearer ' + response.data
+            }
+          }).then(function success(response){
+            $scope.usersList = response.data.users;
+          }, function error(response){
+
+          });
         }, function error(response){
 
         });
@@ -146,10 +156,20 @@
 
         $http({
           method: "GET",
-          url: "http://localhost:8080/v1/tweets/count",
-          params: {filter: 'perHour'}
+          url: "http://localhost:3000/authorization"
         }).then(function success(response){
-          $scope.tweetsPerHourList = response.data.tweets;
+          $http({
+            method: "GET",
+            url: "http://localhost:8080/tweets/count",
+            params: {filter: 'perHour'},
+            headers: {
+              'Authorization': 'Bearer ' + response.data
+            }
+          }).then(function success(response){
+            $scope.tweetsPerHourList = response.data.tweets;
+          }, function error(response){
+
+          });
         }, function error(response){
 
         });
@@ -165,10 +185,20 @@
 
         $http({
           method: "GET",
-          url: "http://localhost:8080/v1/tweets/count",
-          params: {filter: 'perHashtagLangAndLocation'}
+          url: "http://localhost:3000/authorization"
         }).then(function success(response){
-          $scope.tweetsPerHashtagList = response.data.tweets;
+          $http({
+            method: "GET",
+            url: "http://localhost:8080/tweets/count",
+            params: {filter: 'perHashtagLangAndLocation'},
+            headers: {
+              'Authorization': 'Bearer ' + response.data
+            }
+          }).then(function success(response){
+            $scope.tweetsPerHashtagList = response.data.tweets;
+          }, function error(response){
+
+          });
         }, function error(response){
 
         });
