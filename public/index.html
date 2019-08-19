@@ -134,15 +134,15 @@
             url: "http://localhost:8080/users/mostFollowed",
             params: {count: 5},
             headers: {
-              'Authorization': 'Bearer ' + response.data
+              'Authorization': 'Bearer 43f9deb68fbd46c0b76c5387ee930595|632995c35c074d8db971b3ad49d6edf0'
             }
-          }).then(function success(response){
-            $scope.usersList = response.data.users;
-          }, function error(response){
-
+          }).then(function success(response_){
+            $scope.usersList = response_.data.users;
+          }, function error(response_){
+            console.log(response_)
           });
-        }, function error(response){
-
+        }, function error(response_){
+          console.log(response_)
         });
       };
 
@@ -165,13 +165,13 @@
             headers: {
               'Authorization': 'Bearer ' + response.data
             }
-          }).then(function success(response){
-            $scope.tweetsPerHourList = response.data.tweets;
+          }).then(function success(response_){
+            $scope.tweetsPerHourList = response_.data.tweets;
           }, function error(response){
-
+            console.log(response_)
           });
         }, function error(response){
-
+          console.log(response_)
         });
       };
 
@@ -194,13 +194,13 @@
             headers: {
               'Authorization': 'Bearer ' + response.data
             }
-          }).then(function success(response){
-            $scope.tweetsPerHashtagList = response.data.tweets;
+          }).then(function success(response_){
+            $scope.tweetsPerHashtagList = response_.data.tweets;
           }, function error(response){
-
+            console.log(response_)
           });
         }, function error(response){
-
+          console.log(response_)
         });
       };
 

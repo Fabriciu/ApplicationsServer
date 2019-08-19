@@ -6,7 +6,7 @@ let config = require('./config');
 let querystring = require('querystring');
 
 let MongoClient = require('mongodb').MongoClient;
-let mongoUrl = "mongodb+srv://"+config.mongoUser+":"+config.mongoPass+"@"+config.mongoCluster;
+let mongoUrl = config.mongoUrl;
 
 const headers = {
     "Content-Type": "application/x-www-form-urlencoded"
