@@ -1,12 +1,12 @@
-var express = require('express');
-var app = express();
-var port = process.env.PORT || 3000;
+var express = require('express')
+var app = express()
+var port = process.env.PORT || 3000
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'))
 
-var routes = require('./routes/routes');
-routes(app);
+var routes = require('./routes/routes')
+routes(app)
 
-app.listen(port);
+app.listen(port)
 
-console.log("API server started and listening on: " + port);
+console.log("appserver started and listening on: " + port)

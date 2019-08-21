@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<script src="js/angular.min.js"></script>
+
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -11,7 +11,14 @@
 
   <!-- Custom styles for this template -->
   <link href="css/sticky-footer.css" rel="stylesheet">
-  <script src="scripts/controller.js"></script>
+  <script src="js/angular.min.js"></script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="js/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="js/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  
   <title>Twitter Data</title>
 </head>
 <body ng-app="app" ng-controller="mainController">
@@ -24,7 +31,7 @@
     </div>
     <div class="row align-items-start">
       <div class="col">
-        <div class="card" style="width: 22rem;">
+        <div class="card" style="width: 21rem;">
           <div class="card-body">
             <div class="float-sm-right">
               <button type="button" class="btn btn-success" ng-click="listUsers()">Listar</button>
@@ -52,7 +59,7 @@
         </div>
       </div>
       <div class="col">
-        <div class="card" style="width: 20rem;">
+        <div class="card" style="width: 18rem;">
           <div class="card-body">
             <div class="float-sm-right">
               <button type="button" class="btn btn-success" ng-click="listTweetsPerHour()">Listar</button>
@@ -80,7 +87,7 @@
         </div>
       </div>
       <div class="col">
-        <div class="card" style="width: 42rem;">
+        <div class="card" style="width: 35rem;">
           <div class="card-body">
             <div class="float-sm-right">
               <button type="button" class="btn btn-success" ng-click="listTweetsPerHashtag()">Listar</button>
@@ -119,12 +126,7 @@
     </div>
   </footer>
 
+  <script src="js/controller.js"></script>
 
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="js/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="js/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
