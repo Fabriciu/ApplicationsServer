@@ -1,27 +1,5 @@
 version: '3'
 services:
-  # apigateway:
-  #   build:
-  #     context: .
-  #     dockerfile: DockerfileApiGateway
-  #   container_name: apigateway
-  #   ports:
-  #     - 9876:9876
-  #     - 8080:8080
-  #   command: npm run start
-  #   networks:
-  #     - backend
-  # backendserver:
-  #   build:
-  #     context: .
-  #     dockerfile: DockerfileBackendServer
-  #   container_name: backendserver
-  #   links:
-  #     - mongo
-  #   ports:
-  #     - "8001:8001"
-  #   networks:
-  #     - backend
   appserver:
     build:
       context: .
@@ -34,13 +12,6 @@ services:
     command: npm run start
     networks:
       - backend
-  # mongo:
-  #   image: mongo
-  #   container_name: mongo
-  #   ports:
-  #     - "27017:27017"
-  #   networks:
-  #     - backend
 networks:
   backend:
     driver: bridge
