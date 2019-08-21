@@ -1,0 +1,19 @@
+FROM node:latest  
+
+# Expose port
+EXPOSE 3000
+
+WORKDIR /appserver
+RUN mkdir /app
+
+COPY /appserver/package.json /appserver/app/package.json
+WORKDIR /appserver/app
+RUN npm install
+
+ADD appserver /appserver/app/
+
+RUN mkdir /appl
+
+CMD npm start
+
+
